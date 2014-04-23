@@ -29,4 +29,4 @@ ir_order:
 
         order_item:
             quantity: Quantity
-            unitPrice: Unit price
+            unit_price: Unit price

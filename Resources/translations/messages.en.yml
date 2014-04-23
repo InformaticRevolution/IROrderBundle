@@ -2,6 +2,8 @@ ir_order:
     admin:
         order:
             invoice_number: Invoice number
+            created_at: Creation time
+            updated_at: Last update time
             
             list:
                 title: Orders

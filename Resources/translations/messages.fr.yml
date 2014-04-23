@@ -2,6 +2,8 @@ ir_order:
     admin:
         order:
             invoice_number: Numéro de facture
+            created_at: Date de création
+            updated_at: Date de mise à jour
             
             list:
                 title: Commandes

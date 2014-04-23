@@ -1,6 +1,8 @@
 ir_order: 
     admin:
         order:
+            invoice_number: Invoice number
+            
             list:
                 title: Orders
                 no_results: You haven't added any orders yet.
@@ -21,6 +23,14 @@ ir_order:
                 created: The order has been successfully created
                 updated: The order has been successfully updated
                 deleted: The order has been successfully deleted 
+             
+        order_item:
+            quantity: Quantity
+            unit_price: Unit price
+            
+            list:
+                title: Items
+                no_results: You haven't added any items yet.            
                 
     # Form field labels
     form:

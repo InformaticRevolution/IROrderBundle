@@ -1,6 +1,8 @@
 ir_order: 
     admin:
         order:
+            invoice_number: Numéro de facture
+            
             list:
                 title: Commandes
                 no_results: Aucune commande pour le moment. 
@@ -22,6 +24,14 @@ ir_order:
                 updated: La commande a été mise à jour
                 deleted: La commande a été supprimée
                 
+        order_item:
+            quantity: Quantité
+            unit_price: Prix unitaire
+            
+            list:
+                title: Articles
+                no_results: Aucun article pour le moment. 
+
     # Form field labels
     form:  
         order:

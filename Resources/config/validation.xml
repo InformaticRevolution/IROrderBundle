@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="IR\Bundle\OrderBundle\Model\Order">
+        <property name="items">
+            <constraint name="Valid" />
+        </property>
+    </class>    
+    
+    <class name="IR\Bundle\OrderBundle\Model\OrderItem">
+        <property name="quantity">
+            <constraint name="NotBlank">
+                <option name="message">ir_order.order_item.quantity.blank</option> 
+                <option name="groups">Order</option>                       
+            </constraint>
+            <constraint name="GreaterThan">
+                <option name="value">0</option>
+                <option name="message">ir_order.order_item.quantity.small</option>
+            </constraint>            
+        </property> 
+        
+        <property name="unitPrice">
+            <constraint name="NotBlank">
+                <option name="message">ir_order.order_item.unit_price.blank</option> 
+                <option name="groups">Order</option>                       
+            </constraint>
+            <constraint name="GreaterThan">
+                <option name="value">0</option>
+                <option name="message">ir_order.order_item.unit_price.small</option>
+            </constraint>            
+        </property>         
+    </class>
+</constraint-mapping>        

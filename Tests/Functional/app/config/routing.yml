@@ -1,0 +1,3 @@
+ir_order_admin:
+    resource: "@IROrderBundle/Resources/config/routing.xml" 
+    prefix: /admin

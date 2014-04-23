@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="ir_order_admin_order_list" pattern="/" methods="GET">
+        <default key="_controller">IROrderBundle:Admin/Order:list</default>
+    </route>
+ 
+    <route id="ir_order_admin_order_new" pattern="/new">
+        <default key="_controller">IROrderBundle:Admin/Order:new</default>
+    </route>
+
+    <route id="ir_order_admin_order_show" pattern="/{id}" methods="GET">
+        <default key="_controller">IROrderBundle:Admin/Order:show</default>
+    </route>
+
+    <route id="ir_order_admin_order_edit" pattern="/{id}/edit">
+        <default key="_controller">IROrderBundle:Admin/Order:edit</default>
+    </route>   
+    
+    <route id="ir_order_admin_order_delete" pattern="/{id}/delete" methods="GET">
+        <default key="_controller">IROrderBundle:Admin/Order:delete</default>
+    </route>
+</routes>

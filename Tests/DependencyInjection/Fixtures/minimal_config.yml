@@ -1,0 +1,3 @@
+db_driver: orm
+order_class: Acme\OrderBundle\Entity\Order
+order_item_class: Acme\OrderBundle\Entity\OrderItem

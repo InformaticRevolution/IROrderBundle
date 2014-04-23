@@ -1,0 +1,24 @@
+<div class="page-header">
+    <h1>{{ 'ir_order.admin.order.show.title'|trans }}</h1>
+</div>  
+
+<div class="well well-sm">
+    <a href="{{ path('ir_order_admin_order_edit', {'id': order.id}) }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-edit"></span> {{ 'ir_order.admin.order.action.edit'|trans }}
+    </a>
+    <a href="{{ path('ir_order_admin_order_delete', {'id': order.id}) }}" class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash"></span> {{ 'ir_order.admin.order.action.delete'|trans }}
+    </a>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{ 'ir_order.admin.order.show.general_info'|trans }}
+    </div>
+
+    <table class="table table-bordered">
+        <tbody>
+      
+        </tbody>
+    </table>
+</div>

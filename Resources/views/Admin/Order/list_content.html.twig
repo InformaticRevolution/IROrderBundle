@@ -1,0 +1,42 @@
+<div class="page-header">
+    <h1>{{ 'ir_order.admin.order.list.title'|trans }}</h1>
+</div>
+
+<div class="well well-sm">
+    <a href="{{ path('ir_order_admin_order_new') }}" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span> {{ 'ir_order.admin.order.action.new'|trans }}
+    </a>
+</div>  
+
+{% if orders|length %}
+<table class="table table-striped">      
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for order in orders %}
+        <tr>
+            <td>
+                <div class="pull-right">
+                    <a href="{{ path('ir_order_admin_order_show', {'id': order.id}) }}" class="btn btn-default">
+                        <span class="glyphicon glyphicon-list"></span>
+                    </a>                     
+                    <a href="{{ path('ir_order_admin_order_edit', {'id': order.id}) }}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                    <a href="{{ path('ir_order_admin_order_delete', {'id': order.id}) }}" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </a>
+                </div>
+            </td>            
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<div class="well">
+    {{ 'ir_order.admin.order.list.no_results'|trans }}
+</div>
+{% endif %}

@@ -1,0 +1,42 @@
+framework:
+    secret: test
+    test: ~
+    router:
+        resource: "%kernel.root_dir%/config/routing.yml"
+    form: ~
+    csrf_protection: ~
+    validation: { enable_annotations: true }    
+    templating:
+        engines: ['twig', 'php']   
+    session:
+        storage_id: session.storage.mock_file
+     
+# Twig Configuration        
+twig:
+    debug: %kernel.debug%
+    strict_variables: %kernel.debug%        
+          
+# Doctrine Configuration        
+doctrine:
+    dbal:
+        driver: pdo_sqlite
+        path: %kernel.cache_dir%/database.db
+        
+    orm:
+        auto_generate_proxy_classes: %kernel.debug%
+        auto_mapping: true 
+        
+        resolve_target_entities:
+            IR\Bundle\OrderBundle\Model\OrderInterface: IR\Bundle\OrderBundle\Tests\Functional\Bundle\TestBundle\Entity\Order
+        
+# StofDoctrineExtensions Configuration            
+stof_doctrine_extensions:
+    orm:
+        default:
+            timestampable: true        
+        
+# IROrder Configuration
+ir_order:
+    db_driver: orm 
+    order_class: IR\Bundle\OrderBundle\Tests\Functional\Bundle\TestBundle\Entity\Order 
+    order_item_class: IR\Bundle\OrderBundle\Tests\Functional\Bundle\TestBundle\Entity\OrderItem

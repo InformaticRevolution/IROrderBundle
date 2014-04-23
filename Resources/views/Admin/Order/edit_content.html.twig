@@ -1,0 +1,10 @@
+<div class="page-header">
+    <h1>{{ 'ir_order.admin.order.edit.title'|trans }}</h1>
+</div>
+
+<form action="{{ path('ir_order_admin_order_edit', {'id': order.id}) }}" {{ form_enctype(form) }} method="POST" class="form-horizontal" novalidate>
+    {% include 'IROrderBundle:Admin/Order:form.html.twig' %}
+    <div>
+        <button type="submit" class="btn btn-primary">{{ 'ir_order.admin.order.edit.save'|trans }}</button>
+    </div>               
+</form>

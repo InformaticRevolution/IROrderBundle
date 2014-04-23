@@ -1,0 +1,7 @@
+ir_order:
+    order_item:
+        quantity:
+            small: La quantité doit être supérieure à 0
+            
+        unit_price:
+            small: Le prix unitaire doit être supérieure à 0

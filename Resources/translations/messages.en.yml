@@ -1,0 +1,32 @@
+ir_order: 
+    admin:
+        order:
+            list:
+                title: Orders
+                no_results: You haven't added any orders yet.
+            show:
+                title: Order details
+                general_info: General information        
+            new:
+                title: Add an order
+                save: Save
+            edit:
+                title: Edit an order
+                save: Save
+            action: 
+                new: Add an order 
+                edit: Edit
+                delete: Delete            
+            flash:
+                created: The order has been successfully created
+                updated: The order has been successfully updated
+                deleted: The order has been successfully deleted 
+                
+    # Form field labels
+    form:
+        order:
+            items: Items
+
+        order_item:
+            quantity: Quantity
+            unitPrice: Unit price

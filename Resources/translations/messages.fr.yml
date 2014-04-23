@@ -1,0 +1,32 @@
+ir_order: 
+    admin:
+        order:
+            list:
+                title: Commandes
+                no_results: Aucune commande pour le moment. 
+            show:
+                title: Commande
+                general_info: Informations générales        
+            new:
+                title: Ajouter une commande
+                save: Enregistrer
+            edit:
+                title: Modifier une commande
+                save: Enregistrer
+            action: 
+                new: Ajouter une commande 
+                edit: Modifier
+                delete: Supprimer        
+            flash:
+                created: La commande a été créée
+                updated: La commande a été mise à jour
+                deleted: La commande a été supprimée
+                
+    # Form field labels
+    form:  
+        order:
+            items: Articles
+
+        order_item:
+            quantity: Quantité
+            unitPrice: Prix unitaire            

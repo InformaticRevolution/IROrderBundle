@@ -48,7 +48,6 @@ class OrderItemType extends AbstractType
                 'label' => 'ir_order.form.order_item.quantity'
             ))
             ->add('unitPrice', 'money', array( 
-                'divisor' => 100,
                 'label'   => 'ir_order.form.order_item.unit_price'
             ));        
     }

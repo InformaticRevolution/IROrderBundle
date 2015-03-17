@@ -2,9 +2,9 @@
 
 /*
  * This file is part of the IROrderBundle package.
- * 
+ *
  * (c) Julien Kirsch <informatic.revolution@gmail.com>
- * 
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -23,48 +23,48 @@ abstract class Order implements OrderInterface
 {
     /**
      * Order id.
-     * 
+     *
      * @var mixed
      */
     protected $id;
-    
+
     /**
      * Invoice number.
-     * 
+     *
      * @var string
      */
     protected $invoiceNumber;
-    
+
     /**
      * Items.
-     * 
+     *
      * @var Collection
      */
     protected $items;
 
     /**
      * Creation time.
-     * 
+     *
      * @var \DateTime
      */
     protected $createdAt;
 
     /**
      * Last update time.
-     * 
+     *
      * @var \DateTime
      */
-    protected $updatedAt;     
-    
-    
+    protected $updatedAt;
+
+
     /**
      * Constructor.
      */
-    public function __construct() 
+    public function __construct()
     {
         $this->items = new ArrayCollection();
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -72,7 +72,7 @@ abstract class Order implements OrderInterface
     {
         return $this->id;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -80,17 +80,17 @@ abstract class Order implements OrderInterface
     {
         return $this->invoiceNumber;
     }
-    
+
     /**
      * {@inheritdoc}
      */
-    public function setInvoiceNumber($invoiceNumber)  
+    public function setInvoiceNumber($invoiceNumber)
     {
         $this->invoiceNumber = $invoiceNumber;
-        
+
         return $this;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -98,7 +98,7 @@ abstract class Order implements OrderInterface
     {
         return $this->items;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -108,20 +108,20 @@ abstract class Order implements OrderInterface
             $item->setOrder($this);
             $this->items->add($item);
         }
-        
+
         return $this;
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function removeItem(OrderItemInterface $item)
     {
         if ($this->items->removeElement($item)) {
-            $item->setOrder(null);
+            //$item->setOrder(null);
         }
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -137,17 +137,17 @@ abstract class Order implements OrderInterface
     {
         return $this->createdAt;
     }
-    
+
     /**
      * {@inheritdoc}
      */
-    public function setCreatedAt(\DateTime $createdAt) 
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
-        
+
         return $this;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -155,14 +155,14 @@ abstract class Order implements OrderInterface
     {
         return $this->updatedAt;
     }
-    
+
     /**
      * {@inheritdoc}
      */
     public function setUpdatedAt(\DateTime $updatedAt = null)
     {
         $this->updatedAt = $updatedAt;
-        
+
         return $this;
     }
 }
